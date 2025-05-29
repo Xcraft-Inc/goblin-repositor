@@ -4,6 +4,17 @@
 
 Le module `goblin-repositor` est un gestionnaire de dépôts Debian pour l'écosystème Xcraft. Il permet de créer, gérer et servir des dépôts Debian personnalisés, facilitant ainsi la distribution de paquets logiciels dans un environnement contrôlé. Le module fournit un serveur HTTP intégré pour rendre les dépôts accessibles via le réseau.
 
+## Sommaire
+
+- [Structure du module](#structure-du-module)
+- [Fonctionnement global](#fonctionnement-global)
+- [Exemples d'utilisation](#exemples-dutilisation)
+- [Interactions avec d'autres modules](#interactions-avec-dautres-modules)
+- [Configuration avancée](#configuration-avancée)
+- [Détails des sources](#détails-des-sources)
+- [Utilisation du dépôt sur un système Debian](#utilisation-du-dépôt-sur-un-système-debian)
+- [Fonctionnement interne](#fonctionnement-interne)
+
 ## Structure du module
 
 - **Service principal** : Un goblin singleton qui gère les opérations sur les dépôts
@@ -177,13 +188,13 @@ Les dépôts sont organisés selon la structure standard de reprepro :
 
 ### Surveillance des dépôts
 
-Le serveur HTTP surveille les répertoires des dépôts et met à jour automatiquement les routes lorsque de nouveaux dépôts sont créés.
+Le serveur HTTP surveille les répertoires des dépôts et met à jour automatiquement les routes lorsque de nouveaux dépôts sont créés. Il utilise Chokidar pour détecter les changements dans les répertoires et ajoute dynamiquement de nouvelles routes Express pour servir les nouveaux dépôts.
 
 _Cette documentation a été mise à jour automatiquement._
 
 [xcraft-core-etc]: https://github.com/Xcraft-Inc/xcraft-core-etc
 [xcraft-core-goblin]: https://github.com/Xcraft-Inc/xcraft-core-goblin
-[xcraft-contrib-pacman]: https://github.com/Xcraft-Inc/xcraft-core-etc
+[xcraft-contrib-pacman]: https://github.com/Xcraft-Inc/xcraft-contrib-pacman
 [xcraft-core-env]: https://github.com/Xcraft-Inc/xcraft-core-env
 [xcraft-core-platform]: https://github.com/Xcraft-Inc/xcraft-core-platform
 [xcraft-core-fs]: https://github.com/Xcraft-Inc/xcraft-core-fs
