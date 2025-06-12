@@ -16,7 +16,7 @@
   "dependencies": {
     "chokidar": "^3.5.3",
     "express": "^4.17.3",
-    "fs-extra": "^9.1.0",
+    "fs-extra": "^11.3.0",
     "gigawatts": "^4.0.5",
     "xcraft-contrib-pacman": "^1.0.0",
     "xcraft-core-env": "^3.0.4",
